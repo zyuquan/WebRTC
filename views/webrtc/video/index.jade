@@ -1,0 +1,8 @@
+extends ../../layout 
+
+block content 
+  div#container.container.d-flex.justify-content-center.align-items-center.position-relative(style="height: calc(100vh - 56px);background: rgba(0, 0, 0, .1);")
+    video#answer-video(src="" style="max-width: 100%; max-height: 100%;") 
+  
+  script(src='/javascripts/socket.io.min.js')
+  script(src='/javascripts/video.js') 

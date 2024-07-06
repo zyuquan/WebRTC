@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    title title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    // link(rel='stylesheet', href='/bootstrap/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+  body
+    div.navbar.navbar-dark.bg-primary
+      ul.navbar-nav.flex-row
+        li.nav-item
+          span.navbar-brand WEBRTC
+          
+        if title == 'video'
+          li.nav-item.mx-2.active
+            a.nav-link(href="/video") 视频
+        else 
+          li.nav-item.mx-2
+            a.nav-link(href="/video") 视频
+
+        if title == 'share'
+          li.nav-item.mx-2.active
+            a.nav-link(href="/share") 分享
+        else 
+          li.nav-item.mx-2
+                a.nav-link(href="/share") 分享
+
+        if title == 'chat'
+          li.nav-item.mx-2.active
+            a.nav-link(href="/chat") 聊天
+        else
+          li.nav-item.mx-2
+            a.nav-link(href="/chat") 聊天
+
+        if title == 'peer-video'
+          li.nav-item.mx-2.active
+            a.nav-link(href="") Peer视频li.nav-item.mx-2
+        else 
+          li.nav-item.mx-2
+            a.nav-link(href="") Peer视频
+
+        if title == 'peer-share'
+          li.nav-item.mx-2.active
+            a.nav-link(href="") Peer分享
+        else 
+          li.nav-item.mx-2
+            a.nav-link(href="") Peer分享
+
+        if title == 'peer-chat'
+          li.nav-item.mx-2.active
+            a.nav-link(href="") Peer聊天
+        else 
+          li.nav-item.mx-2
+            a.nav-link(href="") Peer聊天 
+
+    block content
